@@ -45,7 +45,7 @@ inputs:
         required: false
     features:
         # NOTE: This cannot easily be used with `args` input, because passing a blank --features argument to clippy is an error.
-        description: List (seperated by ',') of features to enable. Does nothing if blank.
+        description: List (seperated by ' ') of features to enable. Does nothing if blank.
         default: ''
         required: false
     all-features:
