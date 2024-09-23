@@ -39,6 +39,7 @@ test('resolve default inputs', () => {
     expect(inputs!['working-directory']).toBeEmpty();
     expect(inputs!['check-args'].length).toBe(0);
     expect(inputs!['all-features']).toBeFalsy();
+    expect(inputs!.features.length).toBe(0);
     expect(inputs!.forbid.length).toBe(0);
     expect(inputs!.allow.length).toBe(0);
     expect(inputs!.deny.length).toBe(0);

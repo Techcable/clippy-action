@@ -43,6 +43,11 @@ inputs:
         description: List (seperated by ',') of forbidden lints to set. (eq. to the -F/--forbid flag in `cargo clippy`). Deprecated since 1.4, can be used with `check-args` instead.
         default: ''
         required: false
+    features:
+        # NOTE: This cannot easily be used with `args` input, because passing a blank --features argument to clippy is an error.
+        description: List (seperated by ',') of features to enable. Does nothing if blank.
+        default: ''
+        required: false
     all-features:
         description: If the `--all-features` flag should be included. Deprecated since 1.4, can be used with `args` input
         default: 'false'

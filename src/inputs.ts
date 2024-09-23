@@ -22,6 +22,7 @@ export interface Inputs {
     'all-features': boolean;
     'github-token': string;
     'check-args': string[];
+    features: string[];
     forbid: string[];
     allow: string[];
     deny: string[];
@@ -80,12 +81,14 @@ export function getInputs(): Inputs | null {
 
     const args = getArrayInput('args', { sep: ' ' });
     const checkArgs = getArrayInput('check-args', { sep: ' ' });
+    const features = getArrayInput('features', { sep: ',' })
 
     return {
         'working-directory': wd,
         'github-token': token,
         'all-features': getBooleanInput('all-features', { trimWhitespace: true }),
         'check-args': checkArgs,
+        features,
         forbid,
         allow,
         warn,

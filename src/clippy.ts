@@ -60,6 +60,11 @@ export const getClippyOutput = async (
         args.push('--all-features');
     }
 
+    if (inputs.features.length > 0) {
+        // NOTE: Empty --features arg is an error
+        args.push('--features', inputs.features.join(","));
+    }
+
     args.push('--');
     args.push(...inputs.args);
     args.push(...inputs.forbid.map((forbid) => `-F${forbid}`));
