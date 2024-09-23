@@ -60,7 +60,7 @@ export const getClippyOutput = async (
         args.push('--all-features');
     }
 
-    args.push('--features', inputs.features.join(","));
+    args.push('--features', inputs.features.join(','));
 
     args.push('--');
     args.push(...inputs.args);

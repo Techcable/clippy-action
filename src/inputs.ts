@@ -81,7 +81,7 @@ export function getInputs(): Inputs | null {
 
     const args = getArrayInput('args', { sep: ' ' });
     const checkArgs = getArrayInput('check-args', { sep: ' ' });
-    const features = getArrayInput('features', { sep: ' ' })
+    const features = getArrayInput('features', { sep: ' ' });
 
     return {
         'working-directory': wd,
